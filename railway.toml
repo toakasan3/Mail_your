@@ -1,0 +1,34 @@
+# MailGuard OSS - Railway Configuration
+# Deploy three services: api, worker, bot
+
+[build]
+builder = "dockerfile"
+
+# API Service
+[[services]]
+name = "api"
+dockerfile = "apps/api/Dockerfile"
+
+[services.variables]
+PORT = "3000"
+
+[services.healthcheck]
+path = "/health"
+interval = 30
+timeout = 10
+
+# Worker Service
+[[services]]
+name = "worker"
+dockerfile = "apps/worker/Dockerfile"
+
+[services.variables]
+# Worker doesn't need a port
+
+# Bot Service
+[[services]]
+name = "bot"
+dockerfile = "apps/bot/Dockerfile"
+
+[services.variables]
+# Bot doesn't need a port
