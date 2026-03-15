@@ -9,7 +9,7 @@ supabase==2.10.0
 redis==5.2.0
 
 # Security & Cryptography
-cryptography==44.0.0
+cryptography==46.0.5
 bcrypt==4.2.1
 PyJWT==2.10.0
 python-jose[cryptography]==3.3.0
@@ -29,7 +29,7 @@ jinja2==3.1.4
 
 # HTTP Client
 httpx==0.28.0
-aiohttp==3.11.0
+aiohttp==3.13.3
 
 # Security Headers
 secure==1.0.1
@@ -45,4 +45,4 @@ mypy==1.13.0
 
 # Utilities
 python-dotenv==1.0.1
-python-multipart==0.0.18
+python-multipart==0.0.22
