@@ -1,0 +1,58 @@
+[project]
+name = "mailguard-oss"
+version = "1.0.0"
+description = "Telegram-Powered OTP & Email Automation Server"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+authors = [
+    {name = "MailGuard OSS Team"}
+]
+keywords = ["otp", "email", "telegram", "fastapi", "authentication"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Email",
+    "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mailguard-oss"
+Documentation = "https://github.com/yourusername/mailguard-oss#readme"
+Repository = "https://github.com/yourusername/mailguard-oss.git"
+Issues = "https://github.com/yourusername/mailguard-oss/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["apps*", "core*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
