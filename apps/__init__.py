@@ -1,0 +1,3 @@
+"""
+MailGuard OSS - Applications
+"""
